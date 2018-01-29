@@ -1,17 +1,14 @@
 /*
 Navicat MySQL Data Transfer
-
 Source Server         : localhost
 Source Server Version : 1000
 Source Host           : localhost:3306
 Source Database       : vsery
-
 Target Server Type    : MYSQL
 Target Server Version : 1000
 File Encoding         : 65001
-
 Date: 2017-12-13 14:17:22
-UpDate: 2018-1-25 15:35:58 [第一版]
+UpDate: 2018-1-29 15:35:58 [第一版]
 */
 
 SET FOREIGN_KEY_CHECKS = 0;
