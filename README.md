@@ -5,6 +5,15 @@
 
 ## 学习 git 命令
 ```
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>
+创建+切换分支：git checkout -b <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
+```
+
+```
 git init 创建 .git文件夹
 git status 查看文件状态
 git add .[file] 添加文件/文件夹 . 所有文件 [添加到缓存区]
@@ -18,6 +27,10 @@ git remote add origin git@github.com:vsery/learngit.git 关联远程库[github]
 git push -u origin master 推送到远程库 [由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令]
 git clone git@github.com:vsery/vsery.git 克隆远程库[github]到本地库
 git checkout -b dev 创建dev分支，然后切换到dev分支,
-git branch命令查看当前分支：当前分支前面会标一个*号。
+git branch 命令查看当前分支：当前分支前面会标一个*号。
+git branch -d dev 删除dev分支
+git merge dev 命令用于合并指定分支到当前分支
+git log 查看历史
+git log --graph命令可以看到分支合并图
 [file] 文件名,文件夹
 ```
