@@ -40,6 +40,10 @@ git stash pop，恢复的同时把stash内容也删了：
 git pull <远程主机> <远程分支>:<本地分支>  先用把最新的提交从origin/dev抓下来，然后，在本地合并
 git tag <name> 新标签, 查看标签：
 git tag -a v0.2 -m "signed version 0.2 released" 用-a指定标签名，-m指定说明文字 -s用私钥签名
+git push origin <tagname> 推送标签
+git push origin tags 一次性推送全部尚未推送到远程的本地标签：
+git tag -d 删除标签
+git push origin :refs/tags/v0.9 删除命令也是push
 git show <tagname> 可以看到说明文字：
 [file] 文件名,文件夹
 ```
