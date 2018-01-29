@@ -71,7 +71,7 @@ INSERT INTO `vs_user` VALUES( '5', 'adminy', 'd93a5def7511da3d0f2d171d9c344e91',
 INSERT INTO `vs_user` VALUES( '6', 'zero', 'd93a5def7511da3d0f2d171d9c344e91', '张无忌', '13838384138', 'http://images9.baihe.com/landingpage/images_0925/107644834.jpg', '湖南省', '长沙市', '雨花区', '雨花区政府2021', 'zero', '3132629604', '3132626904@qq.com', '2018-01-01 00:00:00', '0', '测试员');
  
 -- ------------------------------------
--- Table Administator for vs_link_group : 用户表
+-- Table Administator for vs_link_group : 链接分组表
 -- ------------------------------------
 DROP TABLE IF EXISTS `vs_link_group`;
 CREATE TABLE `vs_link_group` (
@@ -87,7 +87,7 @@ INSERT INTO `vs_link_group` VALUES( '2', '2', '朋友同事同行', '1', '');
 INSERT INTO `vs_link_group` VALUES( '3', '3', '推荐资源', '1', '');
 
 -- ------------------------------------
--- Table Administator for vs_link : 用户表
+-- Table Administator for vs_link : 链接表
 -- ------------------------------------
 DROP TABLE IF EXISTS `vs_link`;
 CREATE TABLE `vs_link` (
@@ -193,7 +193,7 @@ INSERT INTO `vs_group_item` VALUES( '24', '4', '1', 'JavaScript工具', '2018-1-
 INSERT INTO `vs_group_item` VALUES( '25', '4', '1', 'favicon只做', '2018-1-25 11:15:51', '1', NULL);
 
 -- ------------------------------------
--- Table Web for vs_web_page_group : 页面分类
+-- Table Web for vs_page : 页面
 -- ------------------------------------
 DROP TABLE IF EXISTS `vs_page`;
 CREATE TABLE `vs_page` (
