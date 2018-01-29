@@ -33,5 +33,6 @@ git merge dev 命令用于合并指定分支到当前分支
 git merge --no-ff -m "merge with no-ff" dev [--no-ff参数就可以用普通模式合并]
 git log 查看历史
 git log --graph命令可以看到分支合并图
+git stash 可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
 [file] 文件名,文件夹
 ```
