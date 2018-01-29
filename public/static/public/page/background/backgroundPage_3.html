@@ -11,7 +11,7 @@
         margin: 0;
         padding: 0;
     }
-    
+
     canvas {
         width: 100%;
         height: 100%;
@@ -30,14 +30,12 @@
         canvas.height = window.innerHeight;
         ctx.lineWidth = .3;
         ctx.strokeStyle = (new Color(150)).style;
-
         var mousePosition = {
             x: 30 * canvas.width / 100,
             y: 30 * canvas.height / 100
         };
-
         var dots = {
-            nb: 718,
+            nb: 58,
             distance: 50,
             d_radius: 100,
             array: []
@@ -48,7 +46,7 @@
         }
 
         function createColorStyle(r, g, b) {
-            return 'rgba(' + r + ',' + g + ',' + b + ', 0.8)';
+            return 'rgba(' + r + ',' + g + ',' + b + ', .3)';
         }
 
         function mixComponents(comp1, weight1, comp2, weight2) {
@@ -67,8 +65,8 @@
 
         function Color(min) {
             min = min || 0;
-            this.r = Math.floor(Math.random() * 10 + min);
-            this.g = Math.floor(Math.random() * 175 + min);
+            this.r = Math.floor(Math.random() * 255 + min);
+            this.g = Math.floor(Math.random() * 255 + min);
             this.b = Math.floor(Math.random() * 255 + min);
             this.style = createColorStyle(this.r, this.g, this.b);
         }
@@ -76,15 +74,11 @@
         function Dot() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-
             this.vx = -.5 + Math.random();
             this.vy = -.5 + Math.random();
-
             this.radius = Math.random() * 2;
-
             this.color = new Color();
         }
-
         Dot.prototype = {
             draw: function() {
                 ctx.beginPath();
@@ -102,9 +96,7 @@
 
         function moveDots() {
             for (i = 0; i < dots.nb; i++) {
-
                 var dot = dots.array[i];
-
                 if (dot.y < 0 || dot.y > canvas.height) {
                     dot.vx = dot.vx;
                     dot.vy = -dot.vy;
@@ -122,7 +114,6 @@
                 for (j = 0; j < dots.nb; j++) {
                     i_dot = dots.array[i];
                     j_dot = dots.array[j];
-
                     if ((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > -dots.distance && (i_dot.y - j_dot.y) > -dots.distance) {
                         if ((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > -dots.d_radius && (i_dot.y - mousePosition.y) > -dots.d_radius) {
                             ctx.beginPath();
@@ -147,22 +138,19 @@
         function animateDots() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             moveDots();
-            connectDots();
+            // connectDots();
             drawDots();
 
             requestAnimationFrame(animateDots);
         }
-
         $('canvas').on('mousemove', function(e) {
             mousePosition.x = e.pageX;
             mousePosition.y = e.pageY;
         });
-
         $('canvas').on('mouseleave', function(e) {
             mousePosition.x = canvas.width / 2;
             mousePosition.y = canvas.height / 2;
         });
-
         createDots();
         requestAnimationFrame(animateDots);
     });
