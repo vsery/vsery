@@ -30,6 +30,7 @@ git checkout -b dev 创建dev分支，然后切换到dev分支,
 git branch 命令查看当前分支：当前分支前面会标一个*号。
 git branch -d dev 删除dev分支
 git merge dev 命令用于合并指定分支到当前分支
+git merge --no-ff -m "merge with no-ff" dev [--no-ff参数就可以用普通模式合并]
 git log 查看历史
 git log --graph命令可以看到分支合并图
 [file] 文件名,文件夹
