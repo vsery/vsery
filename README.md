@@ -37,5 +37,6 @@ git stash 可以把当前工作现场"储藏"起来，等以后恢复现场后�
 git stash list 命令看看"储藏"列表
 git stash apply 恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
 git stash pop，恢复的同时把stash内容也删了：
+git pull <远程主机> <远程分支>:<本地分支>  先用把最新的提交从origin/dev抓下来，然后，在本地合并
 [file] 文件名,文件夹
 ```
