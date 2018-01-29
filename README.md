@@ -28,7 +28,10 @@ git push -u origin master 推送到远程库 [由于远程库是空的，我们�
 git clone git@github.com:vsery/vsery.git 克隆远程库[github]到本地库
 git checkout -b dev 创建dev分支，然后切换到dev分支,
 git branch 命令查看当前分支：当前分支前面会标一个*号。
+git branch -r  先查看远程分支
 git branch -d dev 删除dev分支
+git branch -r -d origin/branch-name 删除远程分支
+git push origin :branch-name 推送删除远程分支
 git merge dev 命令用于合并指定分支到当前分支
 git merge --no-ff -m "merge with no-ff" dev [--no-ff参数就可以用普通模式合并]
 git log 查看历史
