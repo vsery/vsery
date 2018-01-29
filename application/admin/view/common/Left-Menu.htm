@@ -1,0 +1,21 @@
+<!-- <ul data id="menubox">
+    <li><a title="菜单" class="el-button-default"><i class="fa fa-fw fa-bars"></i><span>菜单</span></a></li>
+    <li><a href="#/" class="router-link-exact-active router-link-active el-button-default" title="首页"><i class="fa fa-fw fa-windows"></i> <span>首页</span></a></li>
+    <li><a href="#/page/pages" class="el-button-default" title="页面"><i class="fa fa-fw fa-files-o"></i> <span>页面</span></a></li>
+    <li><a href="#/blog/blogs" class="el-button-default" title="博客"><i class="fa fa-fw fa-pied-piper"></i> <span>博客</span></a></li>
+    <li><a href="#/project/projects" class="el-button-default" title="项目"><i class="fa fa-fw fa-github"></i> <span>项目</span></a></li>
+    <li><a href="#/desgin/desgins" class="el-button-default" title="设计"><i class="fa fa-fw fa-drupal"></i> <span>设计</span></a></li>
+    <li><a href="#/music/musics" class="el-button-default" title="音乐"><i class="fa fa-fw fa-music"></i> <span>音乐</span></a></li>
+    <li><a href="#/video/videos" class="el-button-default" title="视频"><i class="fa fa-fw fa-film"></i> <span>视频</span></a></li>
+    <li><a href="#/book/books" class="el-button-default" title="书籍"><i class="fa fa-fw fa-paste"></i> <span>书籍</span></a></li>
+    <li><a href="#/finance/finances" class="el-button-default" title="财务"><i class="fa fa-fw fa-pie-chart"></i> <span>财务</span></a></li>
+    <li><a href="#/wechat/wechats" class="el-button-default" title="微信"><i class="fa fa-fw fa-wechat"></i> <span>微信</span></a></li>
+    <li><a href="#/link/links" class="el-button-default" title="链接"><i class="fa fa-fw fa-link"></i> <span>链接</span></a></li>
+    <li><a href="#/tool/tools" class="el-button-default" title="工具"><i class="fa fa-fw fa-wrench"></i> <span>工具</span></a></li>
+</ul> -->
+<i class="fa fa-fw fa-chart"></i>
+<ul id="menubox">
+    {volist name="sidebarList" id="item"}
+        <li><a href="{$item.path}" title="{$item.text}" class="el-button-default"><i class="fa fa-fw {$item.icon}"></i><span>{{$item.text}}</span></a></li>
+    {/volist}
+</ul>
