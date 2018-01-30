@@ -10,6 +10,6 @@ return [
     ],
     'template'         => [
         // 模板后缀
-        'view_suffix' => 'htm',
+        'view_suffix' => 'vs',
     ],
 ];
