@@ -14,5 +14,8 @@ return [
     'template'         => [
         // 模板后缀
         'view_suffix' => 'vs',
+        'layout_on'     =>  true,
+        'layout_name'   =>  'layout',
+        'layout_item'   =>  '[__REPLACE__]'
     ],
 ];
