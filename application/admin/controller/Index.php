@@ -13,4 +13,8 @@ class Index extends Base
         $this->assign('sidebarList', $sidebarList);
         return $this->fetch();
     }
+    public function icons()
+    {
+        return $this->fetch();
+    }
 }
