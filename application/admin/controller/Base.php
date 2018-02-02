@@ -5,22 +5,33 @@ use think\Controller;
 use think\Request;
 use think\Session;
 use app\admin\model\Sidebar as SidebarModel;
+use app\admin\model\SysTool as SysToolModel;
 use app\admin\model\Admin as AdminModel;
 
 class Base extends Controller
 {
-    public $model_list = [];
     public function _initialize()
     {
-        // $sidebar = Admin::get(Session::get('id'));
-        // Request::instance()->bind('sidebar',$sidebar);
     }
-    public function addModel($key, $value)
+
+    // 获取 侧边栏 模型
+    public function _getSideBar()
     {
-        $this->model_list[$key] = $value;
+        $sidebar = new SidebarModel();
+        return SidebarModel::all();
     }
-    public function getModel($key)
+
+    // 获取 系统 工具 模型
+    public function _getSysTool()
     {
-        return $this->model_list[$key];
+        $SysTool = new SysToolModel();
+        return SysToolModel::all();
+    }
+
+    // 获取 系统管理员 模型
+    public function _getAdminBar()
+    {
+        $admin = new AdminModel();
+        return SidebarModel::all();
     }
 }

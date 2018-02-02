@@ -1,5 +1,3 @@
-{include file="common/page-header" /} 
-
-[__REPLACE__]
-
-{include file="common/page-footer" /}
+<include file="common/header" />
+    <replace></replace>
+<include file="common/footer" />

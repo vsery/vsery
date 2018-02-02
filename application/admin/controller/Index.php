@@ -2,15 +2,16 @@
 namespace app\admin\controller;
 
 use app\admin\controller\Base;
-use app\admin\model\Sidebar as SidebarModel;
 
 class Index extends Base
 {
     public function index()
     {
-        $sidebar = new SidebarModel();
-        $sidebarList  = SidebarModel::all();
-        $this->assign('sidebarList', $sidebarList);
+        $base = \think\Loader::controller('base');
+        $sidebar = $base->_getSideBar();
+        $this->assign('sidebar', $sidebar);
+        $sys_tool = $base->_getSysTool();
+        $this->assign('sys_tool', $sys_tool);
         return $this->fetch();
     }
     public function icons()
