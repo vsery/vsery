@@ -1,8 +1,15 @@
 <form class="navbar-form navbar-left">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="请输入...">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="请输入...">
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-default">
+                    <i class="fa fa-fw fa-search"></i>
+                    搜索
+                </button>
+            </div>
+        </div>
     </div>
-    <button type="submit" class="btn btn-default">搜索</button>
 </form>
 <ul class="nav navbar-nav navbar-left" id="sidebar">
     <volist name="sidebar" id="option" key="sort">

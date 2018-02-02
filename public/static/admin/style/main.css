@@ -7,6 +7,9 @@
 /* 时间轴样式 */
 @import url(timeline.css);
 
+/* input */
+@import url(input.css);
+
 /* 文本样式 */
 @import url(text.css);
 
