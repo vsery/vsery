@@ -10,7 +10,7 @@
 // +----------------------------------------------------------------------
 
 return [
-    '__pattern__'         => [ // 全局变量, 规则定义
+    '__pattern__' => [ // 全局变量, 规则定义
         'name'    => '\w+', // name: 正则 任意英文字符
         'id'      => '\d+', // id: 正则 任意 数字
         'year'    => '\d{4}', // year: 正则 数字 4位
@@ -20,19 +20,18 @@ return [
         'minutes' => '\d{2}', // minutes: 正则 数字 2位
         'seconds' => '\d{2}', // seconds: 正则 数字 2位
     ],
-    '[hello]'             => [
+    '[hello]'     => [
         ':id'   => ['index/index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
-    // http://domainName/index.php/模块/控制器/操作
-    // 添加路由规则 路由到 index控制器的hello操作方法
-    // 'admin/index'         => 'admin/index/index',
-    // 'admin/login'         => 'admin/login/index',
-    // 'admin/login/add'     => 'admin/login/add',
-    // 'admin/login/hello'   => 'admin/login/hello',
-    // 'hello/[:id][:name]$' => 'index/index/hello',
-
-    // '[login]'             => [
-    //     ':login' => ['admin/login/login'],
-    // ],
+    '[blog]'      => [
+        '/index'      => 'admin/blog/index',
+        '/create'     => 'admin/blog/create',
+        '/add'        => 'admin/blog/add',
+        '/add_list'   => 'admin/blog/addList',
+        '/update/:id' => 'admin/blog/update',
+        '/delete/:id' => 'admin/blog/delete',
+        ':id'         => ['admin/blog/read', ['method' => 'get'], ['id' => '\d+']],
+        ':name'       => ['admin/blog/read', ['method' => 'post']],
+    ],
 ];

@@ -7,9 +7,24 @@
  * 侧边栏, 菜单样式
  * 页面主题, 包装样式
  */
-@media (min-width:768px) {
-    #sidebar { z-index: 1; position: absolute; width: 235px; margin-top: 51px; }
-    #sidebar>li { width: 100%; border-bottom: 1px solid gray; }
-    #page-wrapper { position: inherit; margin: 0 0 0 250px; padding: 0 30px; border-left: 1px solid #e7e7e7 }
-}
 #sidebar.navbar-nav .open .dropdown-menu { position: static; float: none; width: auto; margin-top: 0; background-color: transparent; border: 0; -webkit-box-shadow: none; box-shadow: none; }
+@media (min-width:768px) {
+    #top { border-bottom: 1px solid gray; margin-bottom: 0; width: 100%; background-color: #070707; }
+    #sidebar,
+    #sys { z-index: 1; position: fixed; width: 95px; margin-top: 51px; }
+    #sidebar li,
+    #sys li { width: 100%; }
+    #sidebar { left: 15px }
+    #sys { right: 15px }
+    #page-wrapper { position: inherit; margin: 0 100px; padding: 0 30px; }
+}
+
+/* 特效默认按钮 */
+.btn-default { font-weight: normal; line-height: auto; position: relative; display: block; padding: 12px 6px; cursor: pointer; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; word-break: normal; color: rgba(10, 175, 255, .3); border: 1px solid transparent; border-radius: 18px; background-color: rgba(10, 175, 255, .025); }
+.btn-default:hover { color: rgba(10, 175, 255, 1); border: 1px solid rgba(10, 175, 255, .4); border-radius: 0; background-color: rgba(10, 175, 255, .2); box-shadow: 0 0 .5em rgba(10, 175, 255, .7); }
+.btn-default:before,
+.btn-default:after { position: absolute; display: block; width: 20px; height: 20px; content: ''; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; }
+.btn-default:before { top: -5px; left: 25%; }
+.btn-default:after { right: 25%; bottom: -5px; }
+.btn-default:hover:before { top: 65%; left: -5px; border-bottom: 1px solid rgba(10, 175, 255, 1); border-left: 1px solid rgba(10, 175, 255, 1); }
+.btn-default:hover:after { right: -5px; bottom: 65%; border-top: 1px solid rgba(10, 175, 255, 1); border-right: 1px solid rgba(10, 175, 255, 1); }
