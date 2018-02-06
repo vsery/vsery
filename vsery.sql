@@ -379,7 +379,7 @@ CREATE TABLE `sys_tool` (
   `remark` VARCHAR(100) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY(`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 100 DEFAULT CHARSET = utf8;
-INSERT INTO `sys_tool` VALUES( '1', '1', '打开系统菜单', 'fa-bars', NULL, NULL, NULL, '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `sys_tool` VALUES( '1', '1', '系统菜单', 'fa-bars', NULL, NULL, NULL, '2018-1-25 11:15:51', '1', NULL);
 INSERT INTO `sys_tool` VALUES( '2', '2', '全屏显示', 'fa-arrows', NULL, NULL, NULL, '2018-1-25 11:15:51', '1', NULL); 
 INSERT INTO `sys_tool` VALUES( '3', '3', '个人信息', 'fa-eye', 'page/pages', NULL, NULL, '2018-1-25 11:15:51', '1', NULL); 
 INSERT INTO `sys_tool` VALUES( '4', '4', '性能检测', 'fa-desktop', 'blog/blogs', NULL, NULL, '2018-1-25 11:15:51', '1', NULL); 

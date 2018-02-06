@@ -37,7 +37,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="请输入...">
                             <div class="input-group-btn">
-                                <button type="submit" class="btn btn-default"> <i class="fa fa-fw fa-search"></i> 搜索 </button>
+                                <button type="submit" class="btn"> <i class="fa fa-fw fa-search"></i> 搜索 </button>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                 </div>
                 <ul class="nav navbar-nav navbar-right" id="user">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vsery - <span class="help-text">管理员</span> <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vsery - <span class="help-text">管理员</span> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">消息</a></li>
                             <li><a href="#">设置</a></li>

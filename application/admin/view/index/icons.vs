@@ -1,5 +1,5 @@
 <div id="wrap">
-    <div class="navbar navbar-inverse navbar-fixed-top hidden-print">
+    <!-- <div class="navbar navbar-inverse navbar-fixed-top hidden-print">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -67,7 +67,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="jumbotron jumbotron-carousel hidden-print">
         <div class="container">
             <div class="row">

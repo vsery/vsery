@@ -1,13 +1,11 @@
-<!-- <include file="common/navbar" /> -->
-<div class="container-fluid" id="app">
+<div id="page-wrapper">
     <div class="row">
-        <div class="col-xs-12 col-sm-2 col-md-1 col-lg-2" id="sidebar">
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="main">
-        </div>
-        <div class="col-xs-12 col-sm-2 col-md-1 col-lg-2" id="sys">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
         </div>
     </div>
+    <include file="common/breadcrumb" />
+    <include file="index/icons" />
 </div>
 <script type="text/javascript">
     $(function () {
