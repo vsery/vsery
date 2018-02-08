@@ -13,11 +13,4 @@ class Index extends Controller
     {        
         return $this->fetch();
     }
-    public function hello($id='999', $name = 'World')
-    {
-        $request = Request::instance();
-        // 获取当前URL地址 不含域名
-        echo 'url: ' . $request->url() . '<br/>';
-        return 'Hello,' . $id . '！'. $name;
-    }
 }

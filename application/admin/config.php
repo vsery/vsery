@@ -12,14 +12,13 @@ return [
         '__ADMIN__'       => BASE_URL . '/static/admin',
     ],
     'template'         => [
-        // 模板后缀
         'layout_name'  => 'layout',
         'layout_item'  => '<replace></replace>',
         'tpl_begin'    => '{', // 模板引擎普通标签开始标记
         'tpl_end'      => '}', // 模板引擎普通标签结束标记
         'taglib_begin' => '<', // 标签库标签开始标记
         'taglib_end'   => '>', // 标签库标签结束标记
-        'view_suffix'  => 'vs',
+        'view_suffix'  => 'vs', // 模板后缀
         'layout_on'    => true,
     ],
 ];

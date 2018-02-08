@@ -9,6 +9,7 @@
  */
 #sidebar.navbar-nav .open .dropdown-menu { position: static; float: none; width: auto; margin-top: 0; border: 0; background-color: transparent; -webkit-box-shadow: none; box-shadow: none; }
 @media (min-width:768px) {
+    body { overflow: hidden; }
     #top { width: 100%; margin-bottom: 0; border-bottom: 1px solid rgba(10, 175, 255, .25); background-color: #070707; }
     #sidebar,
     #sys { position: fixed; z-index: 1; width: 125px; margin-top: 71px; padding: .5rem; }
@@ -19,7 +20,7 @@
     #sidebar { left: 5px; }
     #sys { right: 5px; }
     #sys .btn { margin-bottom: .5rem; }
-    #page-wrapper { position: inherit; margin: 0 130px; padding: 0 30px; border-left: 1px; border-right: 2px; border-style: solid; border-color: rgba(10, 175, 255, .25); }
+    #page-wrapper { position: fixed; overflow: auto; top: 50px; bottom: 0; left: 130px; right: 130px; padding: 0 30px; border-left: 1px; border-right: 1px; border-style: solid; border-color: rgba(10, 175, 255, .25); }
 }
 
 /* 特效默认按钮 */

@@ -9,6 +9,14 @@ return [
     ],
     'template'         => [
         // 模板后缀
-        'view_suffix' => 'htm',
+        'layout_name'  => 'main',
+        'layout_item'  => '<replace-main></replace-main>',
+        'tpl_begin'    => '{', // 模板引擎普通标签开始标记
+        'tpl_end'      => '}', // 模板引擎普通标签结束标记
+        'taglib_begin' => '<', // 标签库标签开始标记
+        'taglib_end'   => '>', // 标签库标签结束标记
+        'layout_on'    => true,
+        'view_suffix' => 'htm', // 模板后缀
+        
     ],
 ];

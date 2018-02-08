@@ -1,0 +1,37 @@
+/*  Buoy
+    Buoy: Top,QQ,Weibo,WeChat,Share
+*/
+#Buoy { position: fixed; width: 30px; bottom: 30px; right: 30px; z-index: 99; transition:all 1s; }
+#Buoy li a { float: left; width: 30px; height: 30px; margin: 0; padding: 0; background-position: 0 0; }
+#Buoy_Top { background:url(../images/Public/Buoy_Top.png); }
+#Buoy_Top:hover { background:url(../images/Public/Buoy_Top2.png); }
+#Buoy_QQ { background:url(../images/Public/Buoy_QQ.png); }
+#Buoy_QQ:hover { background:url(../images/Public/Buoy_QQ2.png); }
+#Buoy_Weibo { background:url(../images/Public/Buoy_Weibo.png); }
+#Buoy_Weibo:hover { background:url(../images/Public/Buoy_Weibo2.png); }
+#Buoy_WeChat { background:url(../images/Public/Buoy_WeChat.png); }
+#Buoy_WeChat:hover { background:url(../images/Public/Buoy_WeChat2.png); }
+#Buoy_Share { background:url(../images/Public/Buoy_Share.png); position:relative; }
+#Buoy_Share:hover { background:url(../images/Public/Buoy_Share2.png); }
+/*  Buoy
+    Buoy_Share
+    Buoy Share: Sina,Tencent,QQ,Wechat,Baidu,Circle,Waterctress,Tencent_space
+*/
+#Buoy_Share_hover:hover #Buoy_Share_active { display:block; }
+#Buoy_Share_active { position: absolute; width: 120px; left: -120px; display: none; }
+#Buoy_Share_Sina { background:url(../images/Public/Buoy_Share_Sina.png); }
+#Buoy_Share_Sina:hover { background:url(../images/Public/Buoy_Share_Sina2.png); }
+#Buoy_Share_Tencent { background:url(../images/Public/Buoy_Share_Tencent.png); }
+#Buoy_Share_Tencent:hover { background:url(../images/Public/Buoy_Share_Tencent2.png); }
+#Buoy_Share_QQ { background:url(../images/Public/Buoy_Share_QQ.png); }
+#Buoy_Share_QQ:hover { background:url(../images/Public/Buoy_Share_QQ2.png); }
+#Buoy_Share_WeChat { background:url(../images/Public/Buoy_Share_WeChat.png); }
+#Buoy_Share_WeChat:hover { background:url(../images/Public/Buoy_Share_WeChat2.png); }
+#Buoy_Share_Baidu { background:url(../images/Public/Buoy_Share_Baidu.png); }
+#Buoy_Share_Baidu:hover { background:url(../images/Public/Buoy_Share_Baidu2.png); }
+#Buoy_Share_Circle { background:url(../images/Public/Buoy_Share_Circle.png); }
+#Buoy_Share_Circle:hover { background:url(../images/Public/Buoy_Share_Circle2.png); }
+#Buoy_Share_Watercress { background:url(../images/Public/Buoy_Share_Watercress.png); }
+#Buoy_Share_Watercress:hover { background:url(../images/Public/Buoy_Share_Watercress2.png); }
+#Buoy_Share_Tencent_space { background:url(../images/Public/Buoy_Share_Tencent_space.png); }
+#Buoy_Share_Tencent_space:hover { background:url(../images/Public/Buoy_Share_Tencent_space2.png); }
