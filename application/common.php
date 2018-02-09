@@ -10,3 +10,28 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+
+/**
+ * [doCurl description]
+ * @param  [type] $url  [description]
+ * @param  string $type [description]
+ * @param  array  $data [description]
+ * @return [type]       [description]
+ */
+function doCurl($url, $type = 'get', $data = [])
+{
+    $ch = curl_init(); // 初始化
+    // 设置选项
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    if ($type == 'post') {
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    }
+    // 执行并获取内容
+    $output = curl_exec($ch);
+    // 释放 curl 句柄
+    curl_close($ch);
+    return $output;
+}

@@ -68,8 +68,8 @@
             </div>
         </div>
     </div> -->
-    <div class="jumbotron jumbotron-carousel hidden-print">
-        <div class="container">
+    <div class="container">
+        <div class="jumbotron jumbotron-carousel hidden-print">
             <div class="row">
                 <div class="col-md-8 col-sm-8 text-center">
                     <h1>Font Awesome</h1>
