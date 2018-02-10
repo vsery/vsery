@@ -67,4 +67,15 @@ class Index extends Base
         $data = \Map::getAddress($location);
         return $data;
     }
+
+    /**
+     * 返回详细地址
+     * @param  string $location [经纬度]
+     * @return [JSON]           [数据]
+     */
+    public function send($data='obj')
+    {
+        $data = \Email::sendEmail($data);
+        return $data;
+    }
 }
