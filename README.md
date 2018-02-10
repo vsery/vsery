@@ -1,6 +1,15 @@
-# 学习 PHP 语言
+# 邮件服务器
+PHPMailer is available on Packagist (using semantic versioning), and installation via composer is the recommended way to install PHPMailer. Just add this line to your composer.json file:
+```
+"phpmailer/phpmailer": "~6.0"
+```
+or run
+```
+composer require phpmailer/phpmailer
+```
 
-## 学习 thinkphp5 框架
+# 学习 PHP 语言
+### 学习 thinkphp5 框架
 [THINKPHP5 快速入门] (https://www.kancloud.cn/thinkphp/thinkphp5_quickstart)
 
 ## 学习 git 命令
@@ -8,13 +17,10 @@
 查看分支：git branch
 创建分支：git branch <name>
 切换分支：git checkout <name>
-创建+切换分支：git checkout -b <name>
+创建+切换分支：git hecckout -b <name>
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
-```
-
-```
-git init 创建 .git文件夹
+git itnit 创建 .git文件夹
 git status 查看文件状态
 git add .[file] 添加文件/文件夹 . 所有文件 [添加到缓存区]
 git commit -m '' 提交到本地分支.
