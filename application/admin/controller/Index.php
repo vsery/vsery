@@ -75,7 +75,7 @@ class Index extends Base
      */
     public function send($data='obj')
     {
-        $data = \Email::sendEmail($data);
+        $data = \Email::sendEmail();
         return $data;
     }
 }
