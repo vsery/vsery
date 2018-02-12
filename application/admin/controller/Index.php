@@ -73,9 +73,10 @@ class Index extends Base
      * @param  string $location [经纬度]
      * @return [JSON]           [数据]
      */
-    public function send($data='obj')
+    public function send($to, $title, $content)
     {
-        $data = \Email::sendEmail();
-        return $data;
+        \Email::send($to, $title, $content);
+        // \Email::send('vsery@163.com', '测试','一封测试邮件');
+        // return '发送成功';
     }
 }
