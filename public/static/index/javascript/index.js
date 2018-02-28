@@ -38,15 +38,15 @@ $(function() {
         easing: 'swing',
         'afterLoad': function(anchorLink, index, slideIndex) {
             if (index == 1) {
-                // if (slideIndex == 0) {
-                //     $('#Home_one').addClass('active');
-                // }
-                // if (slideIndex == 1) {
-                //     $('#Home_two').addClass('active');
-                // }
-                // if (slideIndex == 2) {
-                //     $('#Home_there').addClass('active');
-                // }
+                if (slideIndex == 0) {
+                    $('#Home_one').addClass('active');
+                }
+                if (slideIndex == 1) {
+                    $('#Home_two').addClass('active');
+                }
+                if (slideIndex == 2) {
+                    $('#Home_there').addClass('active');
+                }
             }
             if (index == 3) {
                 $('#About').addClass('active');
