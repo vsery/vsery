@@ -1,0 +1,10 @@
+/*  Top, Logo */
+#Top_logo { position: fixed; z-index: 99; top: 30px; left: 30px; max-width: 60px; max-height: 60px; transition: all 1s; }
+#Top_logo img { max-width: inherit; max-height: inherit; }
+/*  Top, menu */
+#Top_menu { position: fixed; z-index: 99; top: 30px; right: 30px; transition: all 1s; }
+#Top_menu li { margin-left: 30px; }
+#Top_menu a { float: left; color: #fff; text-height: 30px; }
+#Top_menu a img { vertical-align: middle; }
+#Top_menu a:hover { text-decoration: underline; color: #4affff; }
+#Top_menu .active a { text-decoration: underline; color: #4affff; }
