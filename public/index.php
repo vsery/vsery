@@ -15,6 +15,7 @@
 // 配置全局变量,常量
 define('APP_PATH', __DIR__ . '/../application/');
 define('BASE_URL', 'http://vs.vsery.cn');
+// define('BASE_URL', 'http://vs.vsery.cn');
 
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
