@@ -11,9 +11,10 @@ ol, ul { list-style: none; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
-/* edit for files,Vsery's in the 2018/03/05. Add the following... */
+/* edit for files,Vsery's in the 2018/03/08. Add the following... */
 a { text-decoration: none; -webkit-backface-visibility: hidden; }
 li { list-style: none; }
+li.float { float: left;  }
 * { margin: 0; padding: 0; webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; color: #4affff; -khtml-user-select: none; }
 html, body { font-family: Microsoft YaHei, Arial, Helvetica, sans-serif; font-size: 62.5%; }
 @media screen and (min-width:320px) and (max-width:359px) {
