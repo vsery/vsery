@@ -1,0 +1,23 @@
+<include file="common/header" />
+<div class="section" id='Link'>
+    <ul class='Link_List'>
+        <volist name="linkList" id="option" key="sort">
+            <li class="float">
+                <h3>
+                    <!-- <a href="{$option.text}" title="{$option.text}" target="_blank"> -->
+                        {$option.text}
+                    <!-- </a> -->
+                </h3>
+                <volist name="option.link" id="link" key="sort">
+                    <br>{$link.id}
+                    <a href="{$link.src}" title="{$link.text}" target="_blank"> {$link.text} </a>
+                </volist>
+            </li>
+        </volist>
+    </ul>
+    <!-- <a href="#page1" class='Top_but'>Top</a>
+    <div class="bg">
+        <img src="__INDEX__/images/Index/Mess_bg.jpg" />
+    </div> -->
+</div>
+<include file="common/footer" />

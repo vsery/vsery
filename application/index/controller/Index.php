@@ -19,7 +19,8 @@ class Index extends Controller
     {        
         $link = action('_getLink');
         $this->assign('webLink', $link);
-
+        $this->assign('count', count($link));
+        
         return $this->fetch();
     }
 

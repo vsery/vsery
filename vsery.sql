@@ -93,7 +93,7 @@ DROP TABLE IF EXISTS `vs_link`;
 CREATE TABLE `vs_link` (
   `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `sort` INT(10) DEFAULT '10' COMMENT '排序:越小越前',
-  `groupid` INT(11) DEFAULT NULL COMMENT '分类ID',
+  `link_group_id` INT(11) DEFAULT NULL COMMENT '分类ID',
   `text` VARCHAR(100) DEFAULT NULL COMMENT '文本',
   `src` VARCHAR(100) DEFAULT NULL COMMENT '链接',
   `createtime` datetime DEFAULT '2000-01-01 00:00:00 ' COMMENT '创建时间',
@@ -136,8 +136,8 @@ INSERT INTO `vs_banner` VALUES( '5', '5', 'http://img.zcool.cn/community/0189a25
 -- ------------------------------------
 -- Table Web for vs_group : 页面分类
 -- ------------------------------------
-DROP TABLE IF EXISTS `vs_group`;
-CREATE TABLE `vs_group` (
+DROP TABLE IF EXISTS `vs_page_group`;
+CREATE TABLE `vs_page_group` (
   `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `sort` INT(10) DEFAULT '10' COMMENT '排序:越小越前',
   `text` VARCHAR(100) DEFAULT NULL COMMENT '文本',
@@ -146,19 +146,19 @@ CREATE TABLE `vs_group` (
   `remark` VARCHAR(100) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY(`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 100 DEFAULT CHARSET = utf8;
-INSERT INTO `vs_group` VALUES( '1', '1', '前端', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group` VALUES( '2', '1', '后端', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group` VALUES( '3', '1', '设计', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group` VALUES( '4', '1', '工具', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group` VALUES( '5', '1', '书籍', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group` VALUES( '1', '1', '前端', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group` VALUES( '2', '1', '后端', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group` VALUES( '3', '1', '设计', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group` VALUES( '4', '1', '工具', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group` VALUES( '5', '1', '书籍', '2018-1-25 11:15:51', '1', NULL);
 
 -- ------------------------------------
 -- Table Web for vs_web_page_group : 页面 子分类
 -- ------------------------------------
-DROP TABLE IF EXISTS `vs_group_item`;
-CREATE TABLE `vs_group_item` (
+DROP TABLE IF EXISTS `vs_page_group_child`;
+CREATE TABLE `vs_page_group_child` (
   `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `groupid` INT(10) DEFAULT NULL COMMENT '分类ID',
+  `page_group_id` INT(10) DEFAULT NULL COMMENT '分类ID',
   `sort` INT(10) DEFAULT '10' COMMENT '排序:越小越前',
   `text` VARCHAR(100) DEFAULT NULL COMMENT '文本',
   `createtime` datetime DEFAULT '2000-01-01 00:00:00 ' COMMENT '创建时间',
@@ -166,31 +166,31 @@ CREATE TABLE `vs_group_item` (
   `remark` VARCHAR(100) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY(`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 100 DEFAULT CHARSET = utf8;
-INSERT INTO `vs_group_item` VALUES( '1', '1', '1', 'jQueryUI', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '2', '1', '1', 'Vue', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '3', '1', '1', 'jQuery', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '4', '1', '1', 'Html', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '5', '1', '1', 'CSS', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '6', '1', '1', 'JavaScript', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '7', '1', '1', 'Bootstrap', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '8', '2', '1', 'Ruby', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '9', '2', '1', 'PHP', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '10', '2', '1', 'Java', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '11', '2', '1', 'Python', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '12', '2', '1', 'C++', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '13', '2', '1', 'C#', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '14', '3', '1', '平面设计', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '15', '3', '1', 'Web', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '16', '3', '1', 'banner', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '17', '3', '1', 'UI', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '18', '4', '1', '字体计算', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '19', '4', '1', '正则表达式测试', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '20', '4', '1', 'SQL工具', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '21', '4', '1', 'JSON工具', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '22', '4', '1', 'HTML工具', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '23', '4', '1', 'CSS工具', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '24', '4', '1', 'JavaScript工具', '2018-1-25 11:15:51', '1', NULL);
-INSERT INTO `vs_group_item` VALUES( '25', '4', '1', 'favicon只做', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '1', '1', '1', 'jQueryUI', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '2', '1', '1', 'Vue', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '3', '1', '1', 'jQuery', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '4', '1', '1', 'Html', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '5', '1', '1', 'CSS', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '6', '1', '1', 'JavaScript', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '7', '1', '1', 'Bootstrap', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '8', '2', '1', 'Ruby', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '9', '2', '1', 'PHP', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '10', '2', '1', 'Java', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '11', '2', '1', 'Python', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '12', '2', '1', 'C++', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '13', '2', '1', 'C#', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '14', '3', '1', '平面设计', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '15', '3', '1', 'Web', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '16', '3', '1', 'banner', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '17', '3', '1', 'UI', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '18', '4', '1', '字体计算', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '19', '4', '1', '正则表达式测试', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '20', '4', '1', 'SQL工具', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '21', '4', '1', 'JSON工具', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '22', '4', '1', 'HTML工具', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '23', '4', '1', 'CSS工具', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '24', '4', '1', 'JavaScript工具', '2018-1-25 11:15:51', '1', NULL);
+INSERT INTO `vs_page_group_child` VALUES( '25', '4', '1', 'favicon只做', '2018-1-25 11:15:51', '1', NULL);
 
 -- ------------------------------------
 -- Table Web for vs_page : 页面
@@ -199,8 +199,8 @@ DROP TABLE IF EXISTS `vs_page`;
 CREATE TABLE `vs_page` (
   `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `sort` INT(10) DEFAULT '10' COMMENT '排序:越小越前',
-  `groupid` INT(10) DEFAULT NULL COMMENT '分类ID',
-  `groupitemid` INT(10) DEFAULT NULL COMMENT '分类子ID',
+  `page_group_id` INT(10) DEFAULT NULL COMMENT '分类ID',
+  `page_group_child_id` INT(10) DEFAULT NULL COMMENT '分类子ID',
   `title` VARCHAR(100) DEFAULT NULL COMMENT '标题',
   `key` VARCHAR(100) DEFAULT NULL COMMENT '关机字',
   `text` VARCHAR(100) DEFAULT NULL COMMENT '文本',

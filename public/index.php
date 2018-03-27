@@ -14,7 +14,7 @@
 // 定义应用目录
 // 配置全局变量,常量
 define('APP_PATH', __DIR__ . '/../application/');
-define('BASE_URL', 'http://vs.vsery.cn');
+define('BASE_URL', 'http://vs.vsery.com');
 // define('BASE_URL', 'http://vs.vsery.cn');
 
 // 加载框架引导文件
