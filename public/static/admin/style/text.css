@@ -1,6 +1,0 @@
-/* 定义文本省略 */
-.ellipsis { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.ellipsis.line2 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.ellipsis.line3 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
-.ellipsis.line4 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
-.ellipsis.line5 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 5; }

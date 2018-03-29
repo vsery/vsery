@@ -1,7 +1,5 @@
 <?php
-
 namespace app\index\controller;
-
 use think\Controller;
 use think\Request;;
 use app\index\model\LinkGroup as LinkGroupModel; // 友情链接 数据模型

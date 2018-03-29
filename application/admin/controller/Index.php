@@ -2,6 +2,7 @@
 namespace app\admin\controller;
 
 use app\admin\controller\Base;
+use app\admin\model\Admin as userModel;
 
 class Index extends Base
 {
@@ -11,7 +12,10 @@ class Index extends Base
      */
     public function index()
     {
-        $this->assign('pageTitle', '首页');
+        $this->assign('pageAttr', [ '首页', '主页']
+    );
+        $user = userModel::get(1);
+        $this->assign('user', $user);
 
         $base    = \think\Loader::controller('base');
         $sidebar = $base->_getSideBar();

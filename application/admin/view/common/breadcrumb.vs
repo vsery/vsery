@@ -1,5 +1,5 @@
 <ol class="breadcrumb">
-    <li><a href="#">首页</a></li>
-    <li><a href="#">列表</a></li>
-    <li class="active">data</li>
+    <volist name="pageAttr" id="page" key="sort">
+        <li><a href="" title="{$page}" target="_blank"> {$page} </a></li>
+    </volist>
 </ol>

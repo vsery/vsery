@@ -88,13 +88,6 @@ a.Next_but:hover { color: #000; border-radius: 50%; background-color: rgba(74, 2
 #Mess_List ul li .Mess_Name { font-size: 14px; line-height: 30px; overflow: ellipsis; width: 80%; height: 60px; text-align: left; white-space: nowrap; color: rgba(255, 255, 255, .7); }
 #Mess_List ul li .Mess_Txt { font-size: 14px; line-height: 60px; overflow: ellipsis; width: 80%; height: 60px; text-align: left; white-space: nowrap; color: rgba(0, 255, 255, .7); }
 
-/* Link */
-#Link .Link_List { position: absolute; z-index: 11; top: 13%; left: 6%; width: 88%; height: 74%; background-color: rgba(0, 77, 77, .3); }
-#Link .Link_List li { line-height: 30px; overflow: hidden; width: 25%; height: 30px; }
-#Link .Link_List li a { font-size: 14px; font-weight: normal; font-weight: normal; float: left; overflow: hidden; transition: all 1s; white-space: nowrap; text-indent: 2em; text-overflow: ellipsis; color: #fff; }
-#Link .Link_List li:first-child a { text-decoration: underline; color: #4affff; }
-#Link .Link_List li a:hover { color: #4affff; }
-
 /* Buoy, Buoy: Top,QQ,Weibo,WeChat,Share */
 #Buoy { position: fixed; z-index: 99; right: 30px; bottom: 30px; width: 30px; transition: all 1s; display: none; }
 #Buoy li a { float: left; width: 30px; height: 30px; margin: 0; padding: 0; background-position: 0 0; }
