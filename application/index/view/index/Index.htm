@@ -1,36 +1,11 @@
-<include file="common/full-header" />
-    <!-- 内容页面 -->
-    <div id="dowebok">
-        
-        <!-- 首页HOME -->
-        <include file="index/home" />
-
-        <!-- 产品PRODUCT -->
-        <include file="index/product" />
-        
-        <!-- 关于About -->
-        <include file="index/about" />
-        
-        <!-- 留言Message -->
-        <include file="index/message" />
-        
-        <!-- 友链Link -->
-        <include file="index/link" />
-        
-    </div>
-
-    
-    <!-- 加载顶部导航 -->
-    <include file="index/top" />
-
-    <!-- 顶部LOGO -->
-    <include file="index/top_logo" />
-
-    <!-- 加载浮动 -->
-    <include file="index/buoy" />
-
-    <!-- 加载底部版权 -->
-    <include file="index/copyright" />
-
-    <!-- 加载音乐 -->
-    <!-- <include file="index/music" /> -->
+<ul class='Link_List'>
+    <volist name="linkList" id="option" key="sort">
+        <li class="float">
+            <a href="{$option.text}" title="{$option.text}" target="_blank"> {$option.text} </a>
+            <volist name="option.link" id="link" key="sort">
+                <br>{$link.id}
+                <a href="{$link.src}" title="{$link.text}" target="_blank"> {$link.text} </a>
+            </volist>
+        </li>
+    </volist>
+</ul>

@@ -12,8 +12,7 @@ class Index extends Base
      */
     public function index()
     {
-        $this->assign('pageAttr', [ '首页', '主页']
-    );
+        $this->assign('pageAttr', [ '首页', '主页'] );
         $user = userModel::get(1);
         $this->assign('user', $user);
 
