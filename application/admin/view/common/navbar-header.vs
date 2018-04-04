@@ -9,8 +9,6 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="">Vsery</a>
-                <p class="navbar-text">Signed in as Mark Otto
-                <a href="#" class="navbar-link">Mark Otto</a></p>
             </div>
             <div class="collapse navbar-collapse" id="top-navbar">
                 <form class="navbar-form navbar-left">
@@ -26,9 +24,9 @@
                 <ul class="nav navbar-nav navbar-right" id="user">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        {$user.nickname} - <span class="help-text">{$user.remark}</span> 
-                        <span class="caret"></span>
-                    </a>
+                            {$user.nickname} - <span class="help-text">{$user.remark}</span> 
+                            <span class="caret"></span>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">消息</a></li>
                             <li><a href="#">设置</a></li>

@@ -22,7 +22,13 @@ class Link extends Base
      */
     public function index()
     { 
-        $base    = \think\Loader::controller('base');
+        $this->assign('pageAttr', ['首页', '链接'] );
+
+        $base = \think\Loader::controller('base');
+
+        $user = $base->_getAdmin();
+        $this->assign('user', $user);
+
         $sidebar = $base->_getSideBar();
         $this->assign('sidebar', $sidebar);
         

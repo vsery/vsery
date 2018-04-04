@@ -15,7 +15,13 @@ class Blog extends Base
 
     public function index()
     {
+        $this->assign('pageAttr', [ '首页', '博客'] );
+
         $base = \think\Loader::controller('base');
+
+        $user = $base->_getAdmin();
+        $this->assign('user', $user);
+
         $sidebar = $base->_getSideBar();
         $this->assign('sidebar', $sidebar);
 
@@ -24,10 +30,7 @@ class Blog extends Base
 
         $Blog = action('blog/_getBlog');
         $this->assign('webBlog', $Blog);
-        return $this->fetch();
-    }
-    public function icons()
-    {
+
         return $this->fetch();
     }
 }

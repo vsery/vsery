@@ -4,3 +4,10 @@
 #sys .list-group {
     left: 83.33%;
 }
+.nmb {
+    margin-bottom: 0;
+}
+
+.nbr {
+    border: none;
+}

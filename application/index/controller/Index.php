@@ -35,6 +35,17 @@ class Index extends Controller
 
     public function link()
     {        
+        $this->assign('pageAttr', [ '首页', '主页'] );
+        $user = userModel::get(1);
+        $this->assign('user', $user);
+
+        $base = \think\Loader::controller('base');
+
+        $sidebar = $base->_getSideBar();
+        $this->assign('sidebar', $sidebar);
+
+        $sys_tool = $base->_getTool();
+        $this->assign('sys_tool', $sys_tool);
 
         $linkList = LinkGroupModel::all();
         foreach ($linkList as $item) {
