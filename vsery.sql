@@ -14,8 +14,6 @@ UpDate: 2018-4-8 17:27:38 [第一版] 书籍部分
 
 SET FOREIGN_KEY_CHECKS = 0;
 
--- TRUNCATE `sys_sidebar`; // 清空表
-
 -- ------------------------------------
 -- Table Administator for vs_admin_user : 管理员用户表
 -- ------------------------------------
@@ -382,17 +380,17 @@ CREATE TABLE `sys_tool` (
 ) ENGINE = InnoDB AUTO_INCREMENT = 100 DEFAULT CHARSET = utf8;
 INSERT INTO `sys_tool` VALUES( '1', '1', '系统菜单', 'fa-bars', NULL, NULL, NULL, '2018-1-25 11:15:51', '1', NULL);
 INSERT INTO `sys_tool` VALUES( '2', '2', '全屏显示', 'fa-arrows', NULL, NULL, NULL, '2018-1-25 11:15:51', '1', NULL); 
-INSERT INTO `sys_tool` VALUES( '3', '3', '个人信息', 'fa-eye', 'page/pages', NULL, NULL, '2018-1-25 11:15:51', '1', NULL); 
-INSERT INTO `sys_tool` VALUES( '4', '4', '性能检测', 'fa-desktop', 'blog/blogs', NULL, NULL, '2018-1-25 11:15:51', '1', NULL); 
+INSERT INTO `sys_tool` VALUES( '3', '3', '个人信息', 'fa-eye', NULL, 'page/pages', NULL, '2018-1-25 11:15:51', '1', NULL); 
+INSERT INTO `sys_tool` VALUES( '4', '4', '性能检测', 'fa-desktop', NULL, 'blog/blogs', NULL, '2018-1-25 11:15:51', '1', NULL); 
 INSERT INTO `sys_tool` VALUES( '5', '5', '欣赏音乐', 'fa-music', NULL, 'project/project', NULL, '2018-1-25 11:15:51', '1', NULL); 
 INSERT INTO `sys_tool` VALUES( '6', '6', '时间日期', 'fa-clock-o', NULL, 'desgin/desgins', NULL, '2018-1-25 11:15:51', '1', NULL); 
 INSERT INTO `sys_tool` VALUES( '7', '7', 'WebQQ', 'fa-qq', NULL, 'music/musics', NULL, '2018-1-25 11:15:51', '1', NULL); 
 INSERT INTO `sys_tool` VALUES( '8', '8', '微信登录', 'fa-qrcode', NULL, 'video/videos', NULL, '2018-1-25 11:15:51', '1', NULL); 
 INSERT INTO `sys_tool` VALUES( '9', '9', '微信登录', 'fa-paper-plane-o', NULL, 'book/books', NULL, '2018-1-25 11:15:51', '1', NULL); 
 INSERT INTO `sys_tool` VALUES( '10', '10', '退出系统', 'fa-power-off', NULL, 'finance/finances', NULL, '2018-1-25 11:15:51', '1', NULL); 
-INSERT INTO `sys_tool` VALUES( '11', '11', '', 'fa-flag', NULL, 'wechat/wechats', NULL, '2018-1-25 11:15:51', '1', NULL); 
-INSERT INTO `sys_tool` VALUES( '12', '12', '', 'fa-heartbeat', NULL, 'link/links', NULL, '2018-1-25 11:15:51', '1', NULL); 
-INSERT INTO `sys_tool` VALUES( '13', '13', '', 'fa-cloud', NULL, 'tool/tools', NULL, '2018-1-25 11:15:51', '1', NULL); 
+INSERT INTO `sys_tool` VALUES( '11', '11', '菜单管理', 'fa-flag', NULL, 'web/menu', NULL, '2018-1-25 11:15:51', '1', NULL); 
+INSERT INTO `sys_tool` VALUES( '12', '12', '皮肤设置', 'fa-heartbeat', NULL, 'web/skin', NULL, '2018-1-25 11:15:51', '1', NULL); 
+INSERT INTO `sys_tool` VALUES( '13', '13', '文件管理', 'fa-cloud', NULL, 'tool/tools', NULL, '2018-1-25 11:15:51', '1', NULL); 
 
 -- ------------------------------------
 -- Table Web for vs_book : 书籍

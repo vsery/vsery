@@ -1,2 +1,6 @@
 /* 皮肤 skin */
 @import url(./css/skin.css);
+
+
+/* 字体 10px */
+@import url(./css/fontsize.css);

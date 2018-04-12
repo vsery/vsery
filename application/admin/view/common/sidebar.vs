@@ -1,6 +1,6 @@
 <div class="list-group" data-spy="affix">
     <volist name="sidebar" id="option" key="sort">
-        <a class="list-group-item" href="{$option.path}" title="{$option.text}"> <i class="fa fa-fw {$option.icon}"></i> {$option.text} </a>
+        <a class="list-group-item" href="{:url($option.path)}" title="{$option.text}"> <i class="fa fa-fw {$option.icon}"></i> {$option.text} </a>
         <!-- <if condition="($option[ 'text'] eq '首页') OR ($option[ 'text'] eq '菜单')">
             <li class="dropdown"> <a class="" href="{$option.path}" title="{$option.text}"> <i class="fa fa-fw {$option.icon}"></i> {$option.text}搜索 </a> </li>
             <else />

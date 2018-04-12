@@ -20,18 +20,26 @@ return [
         'minutes' => '\d{2}', // minutes: 正则 数字 2位
         'seconds' => '\d{2}', // seconds: 正则 数字 2位
     ],
-    '[hello]'     => [
-        ':id'   => ['index/index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
-    ],
-    '[blog]'      => [
-        '/index'      => 'admin/blog/index',
-        '/create'     => 'admin/blog/create',
-        '/add'        => 'admin/blog/add',
-        '/add_list'   => 'admin/blog/addList',
-        '/update/:id' => 'admin/blog/update',
-        '/delete/:id' => 'admin/blog/delete',
-        ':id'         => ['admin/blog/read', ['method' => 'get'], ['id' => '\d+']],
-        ':name'       => ['admin/blog/read', ['method' => 'post']],
-    ],
+    // '[hello]'     => [
+    //     ':id'   => ['index/index/hello', ['method' => 'get'], ['id' => '\d+']],
+    //     ':name' => ['index/hello', ['method' => 'post']],
+    // ],
+    // '[blog]'      => [
+    //     '/index'      => 'admin/blog/index',
+    //     '/create'     => 'admin/blog/create',
+    //     '/add'        => 'admin/blog/add',
+    //     '/add_list'   => 'admin/blog/addList',
+    //     '/update/:id' => 'admin/blog/update',
+    //     '/delete/:id' => 'admin/blog/delete',
+    //     ':id'         => ['admin/blog/read', ['method' => 'get'], ['id' => '\d+']],
+    //     ':name'       => ['admin/blog/read', ['method' => 'post']],
+    // ],
+    '[admin]' =>[
+        '/index' => 'admin/index/index',
+        '/blog' => 'admin/blog/index',
+        '/book' => 'admin/book/index',
+        '/link' => 'admin/link/index',
+        '/web/menu' => 'admin/web/index',
+        '/web/skin' => 'admin/web/skin',
+    ]
 ];
