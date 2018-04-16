@@ -1,0 +1,36 @@
+
+        $this->assign('pageAttr', ['主页设置', '菜单管理'] );
+
+        $base = \think\Loader::controller('base');
+
+        $user = $base->_getAdmin();
+        $this->assign('user', $user);
+
+        $sidebar = $base->_getSideBar();
+        $this->assign('sidebar', $sidebar);
+        
+        $sys_tool = $base->_getSysTool();
+        $this->assign('sys_tool', $sys_tool);
+
+        $result = \think\Db::table('web_menu')
+            ->where('id', request()->param('id'))
+            ->find();
+
+        $menu = WebMenuModel()::get(request()->param('id'));
+        return view('read',['webMenu'=>$menu]);
+
+
+
+            // ->where('name','thinkphp')
+        // $id = request()->route('id');
+        // // request()->user = User::get($id);
+        // $id = request()->route('id');
+        // $text = request()->route('text');
+        // $path = request()->route('path');
+        // // echo 'url: ' . Request::url() . '<br/>';
+        // echo 'url: ' . request()->url() . '<br/>';
+        // echo 'url: ' . request()->param('id') . '<br/>';
+        // echo 'url: ' . request()->param('text') . '<br/>';
+        // echo 'url: ' . request()->param('path') . '<br/>';
+        // echo $id, $text, $path;
+        // echo '查看结果';

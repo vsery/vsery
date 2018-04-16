@@ -1,16 +1,17 @@
 <div id="page-wrapper">
-    <form class="form-inline">
+    <form class="form-inline" method="get" action="/admin/web/read">
+    <!-- <form class="form-inline" method="post" action="/admin/web/select"> -->
         <div class="form-group">
             <label for="exampleInputID">ID</label>
-            <input type="text" class="form-control" id="exampleInputID" placeholder="">
+            <input name="id" type="text" class="form-control" id="exampleInputID" placeholder="">
         </div>
         <div class="form-group">
             <label for="exampleInputText">文本</label>
-            <input type="email" class="form-control" id="exampleInputText" placeholder="请输入...">
+            <input name="text" type="text" class="form-control" id="exampleInputText" placeholder="请输入...">
         </div>
         <div class="form-group">
             <label for="exampleInputPath">跳转地址</label>
-            <input type="email" class="form-control" id="exampleInputPath" placeholder="请输入...">
+            <input name="path" type="text" class="form-control" id="exampleInputPath" placeholder="请输入...">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
     </form>
@@ -33,7 +34,7 @@
         </thead>
         <tbody>
             <volist name="webMenu" id="menu" key="sort" mod="4">
-                <if condition="$menu['status'] eq '1'">
+                <if condition="$menu['status'] eq 1">
                     <tr class="info">
                     <else />
                     <tr>
@@ -46,7 +47,7 @@
                 <td class="text-left"> {$menu.style} </td>
                 <td class="text-left"> {$menu.fun} </td>
                 <td class="text-center">
-                    <if condition="$menu['status'] eq '1'">
+                    <if condition="$menu['status'] eq 1">
                         <span class="text-success"> 启用 </span>
                         <else />
                         <span class="text-danger"> 禁用 </span>
@@ -58,7 +59,7 @@
                         <else /> {$menu.remark} </if>
                 </td>
                 <td class="text-right">
-                    <if condition="$menu['status'] eq '1'">
+                    <if condition="$menu['status'] eq 1">
                         <a href="javascript:;" class="text-info">修改</button>
                         <a href="javascript:;" class="text-danger">禁用</button>
                         <else />
@@ -69,25 +70,6 @@
             </volist>
         </tbody>
     </table>
-    <nav aria-label="Page navigation">
-        <ul class="pagination pull-right">
-            <li>
-                <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
 </div>
 <script type="text/javascript">
 $(function() {
