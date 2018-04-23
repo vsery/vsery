@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2018-04-08 10:09:19
+-- Generation Time: 2018-04-23 09:29:51
 -- 服务器版本： 5.7.14
 -- PHP Version: 5.6.25
 
@@ -84,17 +84,17 @@ CREATE TABLE `sys_tool` (
 INSERT INTO `sys_tool` (`id`, `sort`, `text`, `icon`, `style`, `path`, `fun`, `createtime`, `status`, `remark`) VALUES
 (1, 1, '系统菜单', 'fa-bars', NULL, NULL, NULL, '2018-01-25 11:15:51', 1, NULL),
 (2, 2, '全屏显示', 'fa-arrows', NULL, NULL, NULL, '2018-01-25 11:15:51', 1, NULL),
-(3, 3, '个人信息', 'fa-eye', 'page/pages', NULL, NULL, '2018-01-25 11:15:51', 1, NULL),
-(4, 4, '性能检测', 'fa-desktop', 'blog/blogs', NULL, NULL, '2018-01-25 11:15:51', 1, NULL),
+(3, 3, '个人信息', 'fa-eye', '', NULL, NULL, '2018-01-25 11:15:51', 1, NULL),
+(4, 4, '性能检测', 'fa-desktop', '', NULL, NULL, '2018-01-25 11:15:51', 1, NULL),
 (5, 5, '欣赏音乐', 'fa-music', NULL, 'project/project', NULL, '2018-01-25 11:15:51', 1, NULL),
 (6, 6, '时间日期', 'fa-clock-o', NULL, 'desgin/desgins', NULL, '2018-01-25 11:15:51', 1, NULL),
 (7, 7, 'WebQQ', 'fa-qq', NULL, 'music/musics', NULL, '2018-01-25 11:15:51', 1, NULL),
 (8, 8, '微信登录', 'fa-qrcode', NULL, 'video/videos', NULL, '2018-01-25 11:15:51', 1, NULL),
 (9, 9, '微信登录', 'fa-paper-plane-o', NULL, 'book/books', NULL, '2018-01-25 11:15:51', 1, NULL),
 (10, 10, '退出系统', 'fa-power-off', NULL, 'finance/finances', NULL, '2018-01-25 11:15:51', 1, NULL),
-(11, 11, '', 'fa-flag', NULL, 'wechat/wechats', NULL, '2018-01-25 11:15:51', 1, NULL),
-(12, 12, '', 'fa-heartbeat', NULL, 'link/links', NULL, '2018-01-25 11:15:51', 1, NULL),
-(13, 13, '', 'fa-cloud', NULL, 'tool/tools', NULL, '2018-01-25 11:15:51', 1, NULL);
+(11, 11, '菜单管理', 'fa-flag', NULL, 'web/menu', NULL, '2018-01-25 11:15:51', 1, NULL),
+(12, 12, '皮肤设置', 'fa-heartbeat', NULL, 'web/skin', NULL, '2018-01-25 11:15:51', 1, NULL),
+(13, 13, '文件管理', 'fa-cloud', NULL, 'tool/tools', NULL, '2018-01-25 11:15:51', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -620,6 +620,44 @@ INSERT INTO `vs_user` (`id`, `username`, `password`, `nickname`, `moblie`, `head
 (5, 'adminy', 'd93a5def7511da3d0f2d171d9c344e91', '观音大湿', '13838384138', 'http://images9.baihe.com/landingpage/images_0925/110523568.jpg', '湖南省', '长沙市', '雨花区', '雨花区政府2021', 'zero', '3132629604', '3132626904@qq.com', '2018-01-01 00:00:00', 0, '管理员'),
 (6, 'zero', 'd93a5def7511da3d0f2d171d9c344e91', '张无忌', '13838384138', 'http://images9.baihe.com/landingpage/images_0925/107644834.jpg', '湖南省', '长沙市', '雨花区', '雨花区政府2021', 'zero', '3132629604', '3132626904@qq.com', '2018-01-01 00:00:00', 0, '测试员');
 
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `web_menu`
+--
+
+CREATE TABLE `web_menu` (
+  `id` int(11) NOT NULL COMMENT '主键',
+  `sort` int(10) DEFAULT '10' COMMENT '排序:越小越前',
+  `text` varchar(100) DEFAULT NULL COMMENT '提示文本',
+  `icon` varchar(100) DEFAULT NULL COMMENT '图标',
+  `style` varchar(100) DEFAULT NULL COMMENT '样式',
+  `path` varchar(100) DEFAULT NULL COMMENT '跳转地址',
+  `fun` varchar(11) DEFAULT NULL COMMENT '方法',
+  `createtime` datetime DEFAULT '2000-01-01 00:00:00' COMMENT '创建时间',
+  `status` tinyint(3) DEFAULT NULL COMMENT '状态:1启用|0禁用',
+  `remark` varchar(100) DEFAULT NULL COMMENT '备注'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `web_menu`
+--
+
+INSERT INTO `web_menu` (`id`, `sort`, `text`, `icon`, `style`, `path`, `fun`, `createtime`, `status`, `remark`) VALUES
+(1, 1, '菜单', 'fa-bars', NULL, NULL, NULL, '2018-01-25 11:15:51', 0, NULL),
+(2, 2, '首页', 'fa-windows', NULL, 'index', NULL, '2018-01-25 11:15:51', 1, NULL),
+(3, 3, '页面', 'fa-files-o', NULL, 'page', NULL, '2018-01-25 11:15:51', 0, NULL),
+(4, 4, '博客', 'fa-pied-piper', NULL, 'blog', NULL, '2018-01-25 11:15:51', 1, NULL),
+(5, 5, '项目', 'fa-github', NULL, 'project', NULL, '2018-01-25 11:15:51', 0, NULL),
+(6, 6, '设计', 'fa-drupal', NULL, 'desgin', NULL, '2018-01-25 11:15:51', 1, NULL),
+(7, 7, '音乐', 'fa-music', NULL, 'music', NULL, '2018-01-25 11:15:51', 0, NULL),
+(8, 8, '视频', 'fa-film', NULL, 'video', NULL, '2018-01-25 11:15:51', 0, NULL),
+(9, 9, '书籍', 'fa-paste', NULL, 'book', NULL, '2018-01-25 11:15:51', 1, NULL),
+(10, 10, '财务', 'fa-pie-chart', NULL, 'finance', NULL, '2018-01-25 11:15:51', 0, NULL),
+(11, 11, '微信', 'fa-wechat', NULL, 'wechat', NULL, '2018-01-25 11:15:51', 0, NULL),
+(12, 12, '链接', 'fa-link', NULL, 'link', NULL, '2018-01-25 11:15:51', 1, NULL),
+(13, 13, '工具', 'fa-wrench', NULL, 'tool', NULL, '2018-01-25 11:15:51', 1, NULL);
+
 --
 -- Indexes for dumped tables
 --
@@ -715,6 +753,12 @@ ALTER TABLE `vs_user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `web_menu`
+--
+ALTER TABLE `web_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 在导出的表使用AUTO_INCREMENT
 --
 
@@ -742,22 +786,22 @@ ALTER TABLE `vs_banner`
 -- 使用表AUTO_INCREMENT `vs_book`
 --
 ALTER TABLE `vs_book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=100;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=6;
 --
 -- 使用表AUTO_INCREMENT `vs_book_group`
 --
 ALTER TABLE `vs_book_group`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=100;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=16;
 --
 -- 使用表AUTO_INCREMENT `vs_book_group_type`
 --
 ALTER TABLE `vs_book_group_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=100;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=6;
 --
 -- 使用表AUTO_INCREMENT `vs_book_page`
 --
 ALTER TABLE `vs_book_page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=100;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=4;
 --
 -- 使用表AUTO_INCREMENT `vs_key`
 --
@@ -793,6 +837,11 @@ ALTER TABLE `vs_page_group_child`
 --
 ALTER TABLE `vs_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=7;
+--
+-- 使用表AUTO_INCREMENT `web_menu`
+--
+ALTER TABLE `web_menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
